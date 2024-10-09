@@ -1,18 +1,22 @@
 alert("hiii")
+const divContainer=document.createElement('div');
+divContainer.classList.add('container')
+
 const mainHeading=document.createElement('h1');
 mainHeading.innerText="Sticky Notes";
-document.querySelector('body').appendChild(mainHeading);
+divContainer.appendChild(mainHeading);
+
 
 //text area
 const typeNote= document.createElement('textarea');
 typeNote.placeholder="Type a new note...";
-document.querySelector('body').appendChild(typeNote);
-
+divContainer.appendChild(typeNote);
+document.querySelector('body').appendChild(divContainer)
 //button
 
 const addButton= document.createElement('button');
 addButton.innerText="+";
-document.querySelector('body').appendChild(addButton);
+divContainer.appendChild(addButton);
 
 addButton.onclick=()=>{
     const noteContent= typeNote.value;
